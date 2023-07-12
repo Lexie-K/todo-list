@@ -6,7 +6,7 @@ import {
   BsFillTrash3Fill,
   BsPencilSquare,
 } from 'react-icons/bs';
-import './StyledTodoItem.css'
+import './StyledTodoItem.css';
 
 const TodoItem = observer(({ todo }) => {
   const store = useContext(TodoStoreContext);
@@ -22,8 +22,13 @@ const TodoItem = observer(({ todo }) => {
             className="input-edit"
           />
         )}
-        {!todo.isEditing && <span className="styled-title-task ">{todo.title}</span>}
-        <button className="task-btns" onClick={() => store.toggleCompleted(todo.id)}>
+        {!todo.isEditing && (
+          <span className="styled-title-task ">{todo.title}</span>
+        )}
+        <button
+          className="task-btns"
+          onClick={() => store.toggleCompleted(todo.id)}
+        >
           <BsJournalCheck size={20} />
         </button>
         <button className="task-btns" onClick={() => store.removeTodo(todo.id)}>
