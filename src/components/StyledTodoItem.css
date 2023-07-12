@@ -1,0 +1,15 @@
+.complete {
+  text-decoration: line-through;
+}
+
+.input-edit {
+  font-size: 1rem;
+  margin-top: 0px;
+
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 1px solid #999;
+  
+  
+  outline: none;
+}
